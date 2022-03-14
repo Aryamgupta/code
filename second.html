@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>modal</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .upper_content {
+        width: 100%;
+        /* height: 50vh; */
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0 200px 0 200px; */
+      }
+
+      .textcontent {
+        width: 50%;
+        /* background-color: green; */
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .content_number_heading {
+        margin-top: 50px;
+        width: 30%;
+        font-size: 100px;
+        color: rosybrown;
+        padding: 20px;
+      }
+
+      .content_number_heading > p {
+        font-size: 10px;
+        color: black;
+        text-align: center;
+      }
+
+      .sideslidebar {
+        margin-top: -100px;
+        border-left: 3px black solid;
+        margin-left: 50px;
+        padding-left: 20px;
+      }
+      .slidebar_content {
+        margin: 10px;
+        height: 20px;
+        width: 20px;
+        /* background-color: red; */
+        color: grey;
+        border: 1px grey solid;
+        border-radius: 100%;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .sideslidebar > p {
+        /* padding: 20px; */
+      }
+
+      .NumAdd {
+        color: black;
+        border: 1px black solid;
+      }
+
+      .text_para {
+        width: 50%;
+      }
+
+      .number_div {
+        width: 50%;
+        /* background-color: RED; */
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .number_div > h1 {
+        margin: 0 auto 0 auto;
+        /* margin-top: 50px;1 */
+        /* width: 50%; */
+        font-size: 100px;
+        color: rosybrown;
+        /* padding: 20px; */
+      }
+      .number_div > p {
+        padding: 10px;
+        font-size: 15px;
+        color: black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper_content">
+        <div class="textcontent">
+          <h1 class="content_number_heading">
+            8.4M
+            <p>
+              Lorem ipsum dolor sit <br />
+              amet consectetur adipisicing <br />elit. Incidunt
+            </p>
+          </h1>
+          <h1 class="content_number_heading">
+            7.9M
+            <p>
+              Lorem ipsum dolor sit <br />
+              amet consectetur adipisicing <br />elit. Incidunt
+            </p>
+          </h1>
+          <h1 class="content_number_heading" style="margin: 0 auto 0 auto">
+            33.6M
+            <p>
+              Lorem ipsum dolor sit <br />
+              amet consectetur adipisicing <br />elit. Incidunt
+            </p>
+          </h1>
+        </div>
+        <div class="sideslidebar">
+          <p>
+            The <br />
+            first <br />place
+          </p>
+          <div class="slidebar_content">1</div>
+          <div class="slidebar_content">2</div>
+          <div class="slidebar_content">3</div>
+          <div class="slidebar_content">4</div>
+          <div class="slidebar_content">5</div>
+        </div>
+      </div>
+      <div class="upper_content">
+        <div class="textcontent">
+          <div class="text_para">
+            <h3 class="text_head_n">Our Footprint</h3>
+            <p>
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem cum odio iure nihil? Sapiente amet provident vitae
+              impedit, corrupti eos asperiores quo vel! Quo deleniti fugiat
+              placeat maiores, neque assumenda. <br /><br />Lorem ipsum dolor
+              sit, amet consectetur adipisicing elit. Totam temporibus esse
+              praesentium consequuntur debitis aliquid itaque repudiandae nisi
+              corporis, eveniet nemo rem veniam atque ratione, iusto iure quae
+              ea cum.<br />
+              <br />Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Obcaecati consequatur enim expedita, dolor ad officiis modi maxime
+              tenetur, repellat dicta, sequi alias consequuntur ut adipisci
+              corrupti. Nemo accusamus animi culpa.
+            </p>
+          </div>
+          <div class="number_div">
+            <h1>8,679</h1>
+            <p>Lorem ipsum dolor sit +asdasd 10</p>
+            <h1>373.73</h1>
+            <p>Lorem ipsum dolor sit +adsdasd10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const numberPage = document.querySelectorAll(".slidebar_content");
+
+      const NumberArr = new Array(...numberPage);
+      console.log(NumberArr);
+
+      NumberArr.forEach((l, i, NumberArr) => {
+        l.addEventListener("click", () => {
+          for (let j of NumberArr) {
+            j.classList.remove("NumAdd");
+          }
+          NumberArr[i].classList.add("NumAdd");
+        });
+      });
+    </script>
+  </body>
+</html>

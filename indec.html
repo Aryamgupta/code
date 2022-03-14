@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>modal</title>
+    <style>
+      *{
+        padding:0;margin: 0;
+      }
+      .main_container {
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+  display: flex;
+  align-items: left;
+  justify-content: space-evenly;
+  align-items: left;
+  flex-wrap: wrap;
+}
+
+.conatiner_part {
+  width: 25%;
+  min-width: 300px;
+  /* height: 100vh; */
+  /* background-color: green; */
+  padding: 50px;
+}
+
+.conatiner_part > p {
+  text-align: justify;
+}
+
+.conatiner_part > ul {
+  /* margin-left: 7px; */
+  margin-left: 15px;
+}
+
+.side_processing {
+  margin-top: 10px;
+  width: 100%;
+  /* background-color: red; */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background-color: grey;
+}
+
+.add {
+  width: 20px;
+  height: 20px;
+  background-color: rosybrown;
+}
+
+.process_info {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+    </style>
+    
+  </head>
+  <body>
+    <div class="main_container">
+      <div class="conatiner_part">
+        <h3 class="item_heading">DESCRIPTION</h3>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus
+          consequatur
+        </p>
+        <br /><br />
+        <h3 class="item_heading">MATERIAL</h3>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+          quisquam, in inventore magni modi labore quis voluptas reprehenderit
+          fuga quos dolor hic suscipit nihil distinctio ad et deleniti dolore
+          voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+          ipsa nesciunt dolore distinctio quod, consectetur, possimus fuga iure
+          perspiciatis impedit eaque omnis, aspernatur odio fugit ipsam
+          accusantium? Hic, dolores adipisci.
+        </p>
+        <br /><br />
+        <h3 class="item_heading">GARMENT WEIGHT</h3>
+        <br />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro</p>
+        <div class="side_processing">
+            <div class="point"></div>
+            <div class="line"></div>
+            <div class="point"></div>
+            <div class="line"></div>
+            <div class="point"></div>
+            <div class="line"></div>
+            <div class="point"></div>
+            <div class="line"></div>
+            <div class="point"></div>
+            
+
+        </div>
+        <p class="process_info">
+          <span>Light</span>
+          <span>Medium</span>
+          <span>Heavy</span>
+        </p>
+
+      </div>
+      <div class="conatiner_part">
+        <!-- <h3 class="item_heading">SPECIFICATION</h3>
+        <br /> -->
+        <p>
+            <h3 class="item_heading">SPECIFICATION</h3>
+            <br />
+            <ul>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li>
+                <li>nadada</li><li>nadada</li>
+                <li>nadada</li>
+            </ul>
+        </p>
+      </div>
+      <div class="conatiner_part">
+          <h3 class="item_heading">MATERIAL</h3>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+          quisquam, in inventore magni modi labore quis voluptas reprehenderit
+          fuga quos dolor hic suscipit nihil distinctio ad et deleniti dolore
+          voluptatem! Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+          ipsa nesciunt dolore distinctio quod, consectetur, possimus fuga iure
+          perspiciatis impedit eaque omnis, aspernatur odio fugit ipsam
+          accusantium? Hic, dolores adipisci.
+        </p>
+      </div>
+    </div>
+    <script >
+      const point = document.querySelectorAll(".point");
+const arr = new Array(...point);
+
+arr.forEach((points, i, arr) => {
+  points.addEventListener("click", () => {
+    for (let j of arr) {
+      j.classList.remove("add");
+    }
+    arr[i].classList.add("add");
+  });
+});
+
+    </script>
+  </body>
+</html>
